@@ -1,55 +1,54 @@
 using Godot;
 
-public partial class player1 : CharacterBody3D
+public partial class player1: CharacterBody3D
 {
-    // How fast the player moves in meters per second.
-    [Export]
-    public int Speed { get; set; } = 14;
-    // The downward acceleration when in the air, in meters per second squared.
-    [Export]
-    public int FallAcceleration { get; set; } = 75;
+	[Export]
+	public int Speed {get; set;} = 14;
 
-    private Vector3 _targetVelocity = Vector3.Zero;
+	[Export]
+	public int FallAcceleration {get; set; } = 75;
 
-    public override void _PhysicsProcess(double delta)
-    {
-        var direction = Vector3.Zero;
+	private Vector3 _targetVelocity = Vector3.Zero;
 
-        if (Input.IsActionPressed("move_right"))
-        {
-            direction.X += 1.0f;
-        }
-        if (Input.IsActionPressed("move_left"))
-        {
-            direction.X -= 1.0f;
-        }
-        if (Input.IsActionPressed("move_back"))
-        {
-            direction.Z += 1.0f;
-        }
-        if (Input.IsActionPressed("move_forward"))
-        {
-            direction.Z -= 1.0f;
-        }
+	public override void _PhysicsProcess(double delta)
+	{
+		var direction = Vector3.Zero;
 
-        if (direction != Vector3.Zero)
-        {
-            direction = direction.Normalized();
-            GetNode<Node3D>("Pivot").LookAt(Position + direction, Vector3.Up);
-        }
+		if(Input.IsActionPressed("move_right"))
+		{
+			direction.X += 1.0f;
+		}
 
-        // Ground velocity
-        _targetVelocity.X = direction.X * Speed;
-        _targetVelocity.Z = direction.Z * Speed;
+		if(Input.IsActionPressed("move_left"))
+		{
+			direction.X -= 1.0f;
+		}
 
-        // Vertical velocity
-        if (!IsOnFloor()) // If in the air, fall towards the floor. Literally gravity
-        {
-            _targetVelocity.Y -= FallAcceleration * (float)delta;
-        }
+		if(Input.IsActionPressed("move_back"))
+		{
+			direction.Z += 1.0f;
+		}
 
-        // Moving the character
-        Velocity = _targetVelocity;
-        MoveAndSlide();
-    }
+		if(Input.IsActionPressed("move_forward"))
+		{
+			direction.Z -= 1.0f;
+		}
+
+		if(direction != Vector3.Zero)
+		{
+			direction = direction.Normalized();
+			GetNode<Node3D>("Pivot").LookAt(Position + direction, Vector3.Up);
+		}
+
+		_targetVelocity.X = direction.X * Speed;
+		_targetVelocity.Z = direction.Z * Speed;
+
+		if(!IsOnFloor())
+		{
+			_targetVelocity.Y -=FallAcceleration * (float)delta;
+		}
+
+		Velocity = _targetVelocity;
+		MoveAndSlide();
+	}
 }

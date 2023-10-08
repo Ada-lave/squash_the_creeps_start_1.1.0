@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\squash_the_creeps_start_1.1.0\\Squash the Creeps (3D).csproj": {}
+    "C:\\Users\\megak\\OneDrive\\Документы\\GitHub\\squash_the_creeps_start_1.1.0\\Squash the Creeps (3D).csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\squash_the_creeps_start_1.1.0\\Squash the Creeps (3D).csproj": {
+    "C:\\Users\\megak\\OneDrive\\Документы\\GitHub\\squash_the_creeps_start_1.1.0\\Squash the Creeps (3D).csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\squash_the_creeps_start_1.1.0\\Squash the Creeps (3D).csproj",
+        "projectUniqueName": "C:\\Users\\megak\\OneDrive\\Документы\\GitHub\\squash_the_creeps_start_1.1.0\\Squash the Creeps (3D).csproj",
         "projectName": "Squash the Creeps (3D)",
-        "projectPath": "C:\\Users\\User\\Desktop\\squash_the_creeps_start_1.1.0\\Squash the Creeps (3D).csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\squash_the_creeps_start_1.1.0\\.godot\\mono\\temp\\obj\\",
+        "projectPath": "C:\\Users\\megak\\OneDrive\\Документы\\GitHub\\squash_the_creeps_start_1.1.0\\Squash the Creeps (3D).csproj",
+        "packagesPath": "C:\\Users\\megak\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\megak\\OneDrive\\Документы\\GitHub\\squash_the_creeps_start_1.1.0\\.godot\\mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\megak\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -69,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
