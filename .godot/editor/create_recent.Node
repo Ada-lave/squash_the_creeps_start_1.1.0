@@ -1,0 +1,10 @@
+Camera3D
+Marker3D
+CollisionShape3D
+Node3D
+CharacterBody3D
+Node
+DirectionalLight3D
+CPUParticles3D
+MeshInstance3D
+StaticBody3D

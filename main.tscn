@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://dugxb0cys1i5p"]
+
+[ext_resource type="PackedScene" uid="uid://cfrthpo6bj8bg" path="res://player.tscn" id="1_3ejpj"]
+[ext_resource type="Script" path="res://player1.cs" id="2_bpg6y"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_pbeq5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xpssy"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="BoxMesh" id="BoxMesh_l7srg"]
+size = Vector3(60, 2, 60)
+
+[node name="Main" type="Node"]
+
+[node name="Ground" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+physics_material_override = SubResource("PhysicsMaterial_pbeq5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("BoxShape3D_xpssy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+mesh = SubResource("BoxMesh_l7srg")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.850774, 0.0247194, 0.524949, 0.470598, -0.408792, 0.781938, 0.233924, 0.912293, 0.336157, 0, 12.1386, 0)
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("1_3ejpj")]
+script = ExtResource("2_bpg6y")
+
+[node name="Marker3D" type="Marker3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Marker3D"]
+transform = Transform3D(1, 0, 0, 0, 0.280516, 0.959849, 0, -0.959849, 0.280516, 0, 11.7598, 5.12759)
+fov = 87.3
+far = 4009.2
